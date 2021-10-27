@@ -58,7 +58,7 @@ const Truncer = ({ ...props }) => {
     return (
         <Parent onMouseEnter = { () => checkTrunc() } onMouseLeave = { () => setShow(false) }>
         { show ? <Tooltipper>{ refer.current.textContent }</Tooltipper> : '' }
-        <Truncated onClick = { () => console.log(refer.current.textContent) } ref = { refer } truncated = { props.truncated }>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed lectus at eros commodo sagittis. Aliquam laoreet consectetur justo, eget volutpat lacus varius id.</Truncated>
+        <Truncated ref = { refer } truncated = { props.truncated }>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed lectus at eros commodo sagittis. Aliquam laoreet consectetur justo, eget volutpat lacus varius id.</Truncated>
         </Parent>
     )
 };
